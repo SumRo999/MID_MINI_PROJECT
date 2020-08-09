@@ -1,0 +1,32 @@
+<!DOCKTYPE html>
+<html>
+    <head>
+	    <title>Registration</title>
+	</head>
+	<body>
+	    <fieldset>
+		    <legend><b>REGISTRATION</b></legend>
+			<form action="regcheck.php" method="POST">
+			    <p>Id</p><br>
+			    <input type="text" name="id" value=""><br/>
+			    <p>Password</p><br/>
+			    <input type="password" name="password" value=""><br/>
+			    <p>Confirm Password</p><br/>
+			    <input type="password" name="confirmPassword" value=""><br/>
+			    <p>Name</p><br/>
+			    <input type="text" name="name" value=""><br/>
+			    <p>Email</p><br/>
+			    <input type="text" name="email" value=""><br/>
+			    <p>User Type<i>[User/Admin]</i></p><br/>
+			    <select name="userType">
+					<option value="">None</option>
+				    <option>User</option>
+				    <option>Admin</option>
+			    </select>
+			    <hr/>
+			    <input type="submit" name="Register" value="Register">
+				<a href="login.html">Login</a>
+			</form>
+			
+	</body>
+</html>
