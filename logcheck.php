@@ -37,12 +37,12 @@
 				}
 				else
 				{
-					$_SESSION['name']= $d1['name'];
+					$_SESSION['name'] = $d1['name'];
 					$_SESSION['email'] = $d1['email'];
-					$_SESSION['id']= $d1['id'];
-					$_SESSION['password']= $d1['password'];
+					$_SESSION['id'] = $d1['id'];
+					$_SESSION['password'] = $d1['password'];
 					$_SESSION['userType'] = $d1['userType'];
-					$_SESSION['status']  = "set";
+					$_SESSION['status'] = "set";
 					if ($_SESSION['userType']=="Admin") 
 					{
 						header('location:adminhome.php');

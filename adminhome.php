@@ -21,6 +21,7 @@
 <fieldset>
     <p align="center">Admin's Home Page<p>
 </fieldset>
+<br/>
 <fieldset>
     <form action = "logcheck.php" method = "post">
     <table align="center">
@@ -33,13 +34,13 @@
             echo "<p align='right'>Welcome ".$_COOKIE['name']."!</p>";
         ?>
         <tr>
-            <td><a href="profile.html">Profile</a></td>
+            <td><a href="aprofile.php">Profile</a></td>
         </tr>
         <tr>
-            <td><a href="changepassword.html">Change Password</a></td>
+            <td><a href="achangepassword.php">Change Password</a></td>
         </tr>
         <tr>
-            <td><a href="users.html">View Users</a></td>
+            <td><a href="users.php">View Users</a></td>
         </tr>
         <tr>
             <td><a href="logout.php">Logout</a></td>
