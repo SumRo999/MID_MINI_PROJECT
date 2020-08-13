@@ -14,17 +14,24 @@
 			header("location:registration.html");
 		}
 		else{
-			if($password == $confirm_password)
+			$conn = mysqli_connect('127.0.0.1', 'root', '', 'mini project');
+			$result= mysqli_query($conn, "select * from registration where id='".$id."';");
+			$d1=mysqli_fetch_assoc($result);
+			mysqli_close($conn);
+			if(empty($d1['id']))
 			{
-				$file = fopen('user.txt','a');
-				fwrite($file, $name.'|'.$id.'|'.$password.'|'.$confirmPassword.'|'.$email.'|'.$userType."/r/n");
-				fclose($file);
-                header("location:login.html");				
+				if($password == $confirm_password)
+				{
+					$conn = mysqli_connect('127.0.0.1', 'root', '', 'mini project');
+					$result = mysqli_query($conn, "insert into `registration`(`id`, `name`, `email`, `password`,`userType`) values ('".$id."','".$name."','".$email."','".$password."','".$userType."');");
+					mysqli_close($conn);
+					header("location:login.html");				
+				}
+				else
+					echo "Password and confirm password not same";
 			}
 			else
-			{
-				header("location:registration.html");
-			}
+				echo "Username Already exist";
 		}
 	}
 	else
